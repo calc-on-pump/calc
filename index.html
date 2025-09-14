@@ -1,68 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calc — calc is short for calculator</title>
-  <meta name="description" content="calc is short for calculator. $CALC on Solana." />
-  <meta property="og:title" content="Calc — calc is short for calculator" />
-  <meta property="og:description" content="$CALC on Solana. calc is short for calculator." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-calc.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,800&display=swap" rel="stylesheet">
+  <title>$CALC – Calculator Coin</title>
   <style>
-    :root { --ink:#0b0b0b; --paper:#f8f5ef; }
-    *{box-sizing:border-box}
-    body{ margin:0; background: radial-gradient(1200px 700px at 70% 40%, rgba(255,220,120,.55), rgba(255,180,60,.65) 30%, rgba(255,150,40,.85) 60%, rgba(220,90,20,.95)); color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-    .wrap{ min-height:100svh; display:grid; place-items:center; padding:40px 24px; }
-    .grid{ width:100%; max-width:1100px; display:grid; grid-template-columns: 1fr; gap:28px; align-items:center; }
-    @media (min-width:900px){ .grid{ grid-template-columns: 1fr 1.1fr; gap:40px; } }
-    .card{ border-radius:22px; overflow:hidden; box-shadow: 0 12px 40px rgba(0,0,0,.25); background:#111; }
-    .calc-img{ width:100%; height:560px; object-fit:cover; display:block; }
-    .title{ font-family:"Playfair Display", serif; font-weight:800; font-style:italic; font-size:clamp(56px,8vw,92px); line-height:0.95; color:#fff; }
-    .ipa{ color:#fff; opacity:.85; font-style:italic; margin-top:4px; }
-    .def{ color:#fff; font-size:clamp(18px,2.2vw,28px); font-weight:600; line-height:1.25; margin-top:22px; }
-    .row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
-    .btn{ appearance:none; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.08); color:#fff; padding:12px 18px; border-radius:999px; font-weight:600; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); cursor:pointer; transition:.15s transform ease, .2s background ease; }
-    .btn:hover{ background:rgba(255,255,255,.16);} .btn:active{ transform:translateY(1px); }
-    .mono{ font-feature-settings:"tnum" on, "lnum" on; font-variant-numeric: tabular-nums lining-nums; }
-    footer{ color:#fff; opacity:.8; font-size:12px; margin-top:28px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #0d0d0d url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: 1100px;
+      padding: 30px;
+      gap: 50px;
+    }
+    .calc-img {
+      max-width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.15);
+    }
+    .content {
+      max-width: 600px;
+      text-align: left;
+    }
+    .title {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 5rem;
+      margin: 0;
+    }
+    .pronounce {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      opacity: 0.8;
+    }
+    .definition {
+      margin: 20px 0;
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+    .buttons {
+      margin: 20px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #c97c1a;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #e5a64c;
+    }
+    .ca {
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+    #copyCA {
+      background: #333;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    #copyCA:hover {
+      background: #555;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="grid">
-      <!-- Left: Calculator photo (replace src with your hosted image or local file) -->
-      <div class="card">
-        <img class="calc-img" src="calculator.jpg" alt="Calculator" />
+  <div class="container">
+    <img class="calc-img" src="https://i.imgur.com/byn7cWK.gif" alt="Calculator GIF">
+    <div class="content">
+      <div class="title">Calc</div>
+      <div class="pronounce">cal·cu·la·tor /ˈkalkyəˌlādər/</div>
+      <div class="pronounce">calc (slang): short for calculator</div>
+      <div class="definition">
+        something used for making mathematical calculations, in particular a small electronic device with a keyboard and a visual display.
       </div>
-
-      <!-- Right: big type definition + CTAs -->
-      <section>
-        <h1 class="title">Calc</h1>
-        <div class="ipa">cal·cu·la·tor — /ˈkælkjəˌleɪdər/</div>
-        <p class="def">something used for making mathematical calculations, in particular a small electronic device with a keyboard and a visual display.</p>
-        <div class="row">
-          <a class="btn" href="https://pump.fun" target="_blank" rel="noopener">Trade $CALC</a>
-          <a class="btn" href="https://dexscreener.com/solana/PAIR_OR_TOKEN" target="_blank" rel="noopener">View chart</a>
-          <button id="copyCA" class="btn">CA: <span class="mono" id="ca">YOUR_CONTRACT_ADDRESS</span></button>
-        </div>
-        <footer>
-          $CALC on Solana — this is a meme, not financial advice. © <span id="y"></span>
-        </footer>
-      </section>
+      <div class="buttons">
+        <a href="https://pump.fun" class="btn" target="_blank">Trade $CALC</a>
+        <a href="https://www.calculator.net/" class="btn" target="_blank">Calc</a>
+      </div>
+      <div class="ca">
+        CA: <span id="ca">(TBA)</span>  
+        <div id="copyCA">Copy CA</div>
+      </div>
     </div>
-  </main>
+  </div>
+  <footer>
+    $CALC on Solana – this is a meme that might make millions, not financial advice. © <span id="year"></span>
+  </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    document.getElementById('copyCA').addEventListener('click', async ()=>{
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('copyCA').addEventListener('click', async () => {
       const ca = document.getElementById('ca').textContent.trim();
-      try{ await navigator.clipboard.writeText(ca); const b=document.getElementById('copyCA'); const old=b.innerHTML; b.textContent='Copied!'; setTimeout(()=> b.innerHTML = 'CA: <span class="mono" id="ca">'+ca+'</span>', 1100); }catch(e){}
+      try {
+        await navigator.clipboard.writeText(ca);
+        const btn = document.getElementById('copyCA');
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = old; }, 1200);
+      } catch (e) {
+        console.error('Copy failed', e);
+      }
     });
   </script>
 </body>
 </html>
-
